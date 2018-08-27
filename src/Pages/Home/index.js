@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Button, Header, Menu, Segment, Sidebar } from 'semantic-ui-react'
+import { Button, Menu, Segment, Sidebar } from 'semantic-ui-react'
 
 import MyNavigation from '../../Navigationbar'
+import NavbarPusher from '../../NavbarPusher'
 import Landing from '../../Landing'
 import About from '../../About'
 
@@ -45,14 +46,8 @@ export default class Home extends Component {
               </Menu.Item>
             </Sidebar>
 
-            <Sidebar.Pusher>
-              <Segment basic>
-                <Header as='h3'>
-                  <Landing />
-                  <About />
-                </Header>
-              </Segment>
-            </Sidebar.Pusher>
+            <NavbarPusher><Landing/></NavbarPusher>
+            <NavbarPusher><About/></NavbarPusher>
           </Sidebar.Pushable>
         </div>
       )
